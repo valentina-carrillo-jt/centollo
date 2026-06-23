@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - El Centollo</title>
+
+    <style>
+        /* RESET GENERAL */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background-color:#ffffff;
+            color:#333;
+        }
+
+        /* ENCABEZADO */
+        .encabezado{
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+
+        .logo{
+            width:100%;
+            display:flex;
+            justify-content:center;
+            padding:40px 0;
+            background-color:#ffffff;
+        }
+
+        .logo img{
+            width:500px;
+            max-width:95vw;
+            height:auto;
+        }
+
+        .barra-navegacion{
+            width:100%;
+            background-color:#111518;
+            padding:30px 0;
+        }
+
+        .menu{
+            display:flex;
+            justify-content:center;
+            list-style:none;
+            gap:80px;
+        }
+
+        .menu a{
+            text-decoration:none;
+            color:#ffffff;
+            font-weight:bold;
+            font-size:1.3rem;
+        }
+
+        .menu a:hover{
+            color:#f0eae1;
+        }
+
+        /* BANNER */
+        .banner-contacto{
+            background-color:#fffcf5;
+            width:100%;
+            padding:50px 20px;
+            text-align:center;
+            border-bottom:1px solid #f0eae1;
+        }
+
+        .linea-decorativa{
+            width:80px;
+            height:1px;
+            background-color:#9e6b43;
+            margin:0 auto 15px;
+        }
+
+        .banner-contacto h1{
+            color:#111518;
+            font-family:Georgia, serif;
+            font-size:2.2rem;
+            font-style:italic;
+            margin-bottom:25px;
+        }
+
+        .banner-contacto p{
+            color:#555;
+            font-size:1.05rem;
+            max-width:800px;
+            margin:auto;
+        }
+
+        /* COLUMNAS */
+        .columnas-contacto{
+            max-width:1100px;
+            margin:60px auto;
+            padding:0 40px;
+            display:flex;
+            justify-content:space-between;
+            gap:80px;
+        }
+
+        .columna{
+            flex:1;
+        }
+
+        .columna h2{
+            color:#9e6b43;
+            font-family:Georgia, serif;
+            font-size:1.6rem;
+            font-style:italic;
+            margin-bottom:25px;
+        }
+
+        .columna p{
+            font-size:1.05rem;
+            color:#444;
+            margin-bottom:15px;
+            line-height:1.6;
+        }
+
+        .email-link{
+            color:#2ec4b6;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .email-link:hover{
+            text-decoration:underline;
+        }
+
+        /* QR */
+        .qr{
+            text-align:center;
+            margin:40px 0;
+        }
+
+        .qr img{
+            width:250px;
+            max-width:90%;
+        }
+
+        /* FOOTER */
+        /* FOOTER NUEVO */
+
+.footer-centollo{
+    margin-top:50px;
+    background:#111518;
+    color:white;
+}
+
+.footer-info{
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.footer-info .item{
+    width:180px;
+    margin:10px;
+}
+
+.footer-info h4{
+    color:#5bc26b;
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+.footer-info p{
+    font-size:13px;
+    line-height:1.5;
+}
+
+.footer-contacto{
+    background:#f4f4f4;
+    color:#5bc26b;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.datos p{
+    margin:5px 0;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.redes{
+    display:flex;
+    gap:15px;
+}
+
+.redes a{
+    text-decoration:none;
+    font-size:35px;
+    transition:0.3s;
+}
+
+.redes a:hover{
+    transform:scale(1.15);
+}
+
+@media(max-width:768px){
+
+    .footer-info{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .footer-contacto{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+}
+        /* RESPONSIVO */
+        @media (max-width:768px){
+
+            .logo img{
+                width:280px;
+            }
+
+            .barra-navegacion{
+                padding:15px 0;
+            }
+
+            .menu{
+                flex-direction:column;
+                align-items:center;
+                gap:15px;
+            }
+
+            .menu a{
+                font-size:1.1rem;
+            }
+
+            .columnas-contacto{
+                flex-direction:column;
+                gap:40px;
+                padding:0 20px;
+            }
+
+            .banner-contacto h1{
+                font-size:1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="El Centollo">
+        </div>
+
+        <nav class="barra-navegacion">
+            <ul class="menu">
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner-contacto">
+        <div class="linea-decorativa"></div>
+        <h1>Contacto</h1>
+        <p>
+            Ante cualquier duda o sugerencia, por favor póngase en contacto con nosotros.
+            Estamos aquí para atenderle.
+        </p>
+    </section>
+
+    <!-- INFORMACIÓN -->
+    <main class="columnas-contacto">
+
+        <article class="columna">
+            <h2>Atención al cliente</h2>
+            <p>Lunes a viernes de 8:00 a 14:30 horas.</p>
+            <p>Sábados de 8:00 a 14:00 horas.</p>
+            <p><strong>Domingos y festivos cerrados.</strong></p>
+        </article>
+
+        <article class="columna">
+            <h2>Datos de contacto</h2>
+            <p><strong>Dirección:</strong> Bogotá, Colombia</p>
+            <p><strong>Teléfono:</strong> 3046801050</p>
+            <p><strong>Email:</strong>
+                <a href="mailto:centollo@gmail.com" class="email-link">
+                    centollo@gmail.com
+                </a>
+            </p>
+        </article>
+
+    </main>
+
+    <!-- QR -->
+    <div class="qr">
+        <img src="img/qr contactos.png" alt="Código QR">
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-centollo">
+
+    <div class="footer-info">
+
+        <div class="item">
+            <h4>DESDE 1911</h4>
+            <p>Más de 100 años trabajando con los mejores productos del mar.</p>
+        </div>
+
+        <div class="item">
+            <h4>PRODUCTO FRESCO</h4>
+            <p>Pescados y mariscos frescos directamente de la lonja.</p>
+        </div>
+
+        <div class="item">
+            <h4>ARTESANAL</h4>
+            <p>Procesos tradicionales para conservar el mejor sabor.</p>
+        </div>
+
+        <div class="item">
+            <h4>TIENDA PROPIA</h4>
+            <p>También puedes visitarnos en nuestras instalaciones.</p>
+        </div>
+
+        <div class="item">
+            <h4>CALIDAD</h4>
+            <p>Seleccionamos cuidadosamente cada producto para ti.</p>
+        </div>
+
+    </div>
+
+    <div class="footer-contacto">
+
+        <div class="datos">
+            <p>📍 Carrera 1 #93-50 Chicó Alto, Bogotá</p>
+            <p>📞 (+57) 316 690 0508</p>
+            <p>✉ servicioalcliente@elcentollo.com</p>
+        </div>
+
+        <div class="redes">
+            <a href="#">📘</a>
+            <a href="#">🐦</a>
+            <a href="#">🟢</a>
+            <a href="#">✈️</a>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

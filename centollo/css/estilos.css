@@ -1,0 +1,317 @@
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #333;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CONTENEDOR DEL LOGO (Forzado a ser más grande) */
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0; /* Mayor espacio arriba y abajo */
+    background-color: #ffffff; /* Asegura un fondo limpio */
+}
+
+/* IMAGEN DEL LOGO (Fuerza el tamaño grande real) */
+.logo img {
+    width: 500px; /* Escalado a 500px para que se note la diferencia */
+    max-width: 95vw;
+    height: auto;
+    object-fit: contain;
+}
+
+/* BARRA DE NAVEGACIÓN NEGRA MÁS AMPLIA */
+.barra-navegacion {
+    width: 100%;
+    background-color: #111518;
+    padding: 30px 0; /* Mucho más alta y espaciosa */
+}
+
+/* Menú con gran separación */
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 80px; /* Enlaces muy separados */
+}
+
+/* Texto del menú extra grande y legible */
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.6rem; /* Incrementado a 1.6rem para que sea gigante */
+    letter-spacing: 1px;
+    transition: color 0.2s, opacity 0.2s;
+}
+
+.menu a:hover {
+    opacity: 0.85;
+    color: #f0eae1;
+}
+
+/* CONTENEDOR PRINCIPAL AMPLIO */
+.contenedor-principal {
+    display: flex;
+    max-width: 1200px; 
+    margin: 50px auto;
+    background-color: #fffcf5; 
+    border: 1px solid #f0eae1;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 40px 30px;
+    gap: 20px;
+}
+
+/* SECCIÓN DEL SLIDER */
+.slider-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#slider {
+    width: 100%;
+    max-width: 480px; 
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* INDICADORES DEL SLIDER */
+.puntos {
+    display: flex;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.puntos span {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.puntos span.activo {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+/* SECCIÓN DE INFORMACIÓN */
+.informacion {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.informacion h2 {
+    color: #9e6b43; 
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: -5px;
+}
+
+.informacion strong {
+    color: #222;
+}
+
+.datos-cientificos p, 
+.especificaciones p {
+    margin-bottom: 6px;
+}
+
+.especificaciones {
+    display: flex;
+    gap: 30px;
+    margin-top: 5px;
+}
+
+/* RESPONSIVO PARA MÓVILES */
+@media (max-width: 768px) {
+    .logo {
+        padding: 20px 0;
+    }
+    .logo img {
+        width: 280px;
+    }
+    .barra-navegacion {
+        padding: 15px 0;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .menu a {
+        font-size: 1.2rem;
+    }
+    .contenedor-principal {
+        flex-direction: column;
+        margin: 15px;
+        padding: 20px;
+    }
+    .especificaciones {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+.footer-simple{
+    background-color: #111518;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.footer-simple p{
+    margin: 5px 0;
+}
+/* ====== PÁGINA INTEGRANTES ====== */
+
+.titulo-equipo{
+    text-align:center;
+    padding:60px 20px;
+    background:#fffcf5;
+}
+
+.titulo-equipo h1{
+    font-size:45px;
+    color:#9e6b43;
+    margin-bottom:10px;
+}
+
+.titulo-equipo p{
+    color:#666;
+    font-size:18px;
+}
+
+.contenedor-tarjetas{
+    max-width:1200px;
+    margin:60px auto;
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.tarjeta{
+    width:350px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    text-align:center;
+    transition:0.4s;
+}
+
+.tarjeta:hover{
+    transform:translateY(-10px);
+}
+
+.tarjeta img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.tarjeta h2{
+    font-size:22px;
+    color:#9e6b43;
+    padding:20px 15px 10px;
+}
+
+.tarjeta p{
+    padding:0 20px 25px;
+    color:#555;
+    line-height:1.6;
+}
+
+.footer-equipo{
+    background:#111518;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+/* MODAL PROMOCIÓN */
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal-contenido{
+    background:white;
+    width:90%;
+    max-width:500px;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    position:relative;
+}
+
+.modal-contenido h2{
+    color:#9e6b43;
+    margin-bottom:15px;
+}
+
+.img-promo{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.cerrar{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:30px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#cerrarBtn{
+    background:#9e6b43;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#cerrarBtn:hover{
+    opacity:0.9;
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú - El Centollo</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#fcfcfc;
+    color:#333;
+}
+
+/* ENCABEZADO */
+.encabezado{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.logo{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:40px 0;
+    background:#fff;
+}
+
+.logo img{
+    width:500px;
+    max-width:95%;
+    height:auto;
+}
+
+.barra-navegacion{
+    width:100%;
+    background:#111518;
+    padding:25px 0;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    font-size:1.2rem;
+}
+
+.menu a:hover{
+    color:#d8c4a0;
+}
+
+/* TITULO */
+.titulo-menu{
+    text-align:center;
+    color:#9e6b43;
+    margin:40px 0;
+    font-size:2.5rem;
+}
+
+/* CONTENEDOR */
+.contenedor-menu{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.cuadricula-menu{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* TARJETAS */
+.tarjeta-plato{
+    display:flex;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.tarjeta-plato:hover{
+    transform:translateY(-5px);
+}
+
+.foto-plato{
+    width:250px;
+    min-width:250px;
+}
+
+.foto-plato img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.detalle-plato{
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.detalle-plato h3{
+    color:#9e6b43;
+    margin-bottom:10px;
+}
+
+.ingredientes{
+    line-height:1.6;
+    color:#555;
+}
+
+/* FOOTER */
+/* FOOTER NUEVO */
+
+.footer-centollo{
+    margin-top:50px;
+    background:#111518;
+    color:white;
+}
+
+.footer-info{
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.footer-info .item{
+    width:180px;
+    margin:10px;
+}
+
+.footer-info h4{
+    color:#5bc26b;
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+.footer-info p{
+    font-size:13px;
+    line-height:1.5;
+}
+
+.footer-contacto{
+    background:#f4f4f4;
+    color:#5bc26b;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.datos p{
+    margin:5px 0;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.redes{
+    display:flex;
+    gap:15px;
+}
+
+.redes a{
+    text-decoration:none;
+    font-size:35px;
+    transition:0.3s;
+}
+
+.redes a:hover{
+    transform:scale(1.15);
+}
+
+@media(max-width:768px){
+
+    .footer-info{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .footer-contacto{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .logo img{
+        width:280px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .tarjeta-plato{
+        flex-direction:column;
+    }
+
+    .foto-plato{
+        width:100%;
+        height:250px;
+    }
+
+    .titulo-menu{
+        font-size:2rem;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header class="encabezado">
+
+    <div class="logo">
+        <img src="img/logo.png" alt="El Centollo">
+    </div>
+
+    <nav class="barra-navegacion">
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main class="contenedor-menu">
+
+    <h1 class="titulo-menu">Nuestro Menú</h1>
+
+    <div class="cuadricula-menu">
+<!-- SECCIÓN DE MENÚ -->
+            <!-- Opción 1 -->
+            <div class="tarjeta-plato">
+                <div class="foto-plato">
+                    <img src="img/Pate-de-centollo-VC17.jpg" alt="Falsa mousse centollo en cucharitas">
+                </div>
+                <div class="detalle-plato">
+                    <h3>Falsa mousse centollo en cucharitas</h3>
+                    <p class="ingredientes">Huevos cocidos, palitos de cangrejo, mejillones al natural escurridos, berberechos al natural escurridos, mayonesa, nata para cocinar, sal, cucharitas comestibles.</p>
+                </div>
+            </div>
+
+            <!-- Opción 2 -->
+            <div class="tarjeta-plato">
+                <div class="foto-plato">
+                    <img src="img/crema.jfif" alt="Crema de centolla con crujiente de pan">
+                </div>
+                <div class="detalle-plato">
+                    <h3>Crema de centolla con crujiente de pan</h3>
+                    <p class="ingredientes">Centollas cocidas, Cebollas medianas, Leche entera con calcio, Maicena, Sal, Pimienta negra, Nuez moscada, Aceite de oliva virgen extra, Pan rallado (previamente tostado).</p>
+                </div>
+            </div>
+
+            <!-- Opción 3 -->
+            <div class="tarjeta-plato">
+                <div class="foto-plato">
+                    <img src="img/patata.jpg" alt="Palta rellena con salpicón de centolla">
+                </div>
+                <div class="detalle-plato">
+                    <h3>Palta rellena con salpicón de centolla</h3>
+                    <p class="ingredientes">carne de centolla cocida, cebolla morada cortada en cuadritos, pimiento morrón cortado en cuadritos, apio cortado en cuadritos, cilantro picado, mayonesa, mostaza a la piedra.</p>
+                </div>
+            </div>
+
+            <!-- Opción 4 -->
+            <div class="tarjeta-plato">
+                <div class="foto-plato">
+                    <img src="img/empa.webp" alt="Empanadas de chupe de centolla con camarones">
+                </div>
+                <div class="detalle-plato">
+                    <h3>Empanadas de chupe de centolla con camarones</h3>
+                    <p class="ingredientes">ingredientes para el relleno, carne de centolla cocida, camarones desvenados, cortados en trocitos, mantequilla sin sal, cebolla cortada en cuadritos.</p>
+                </div>
+            </div>
+
+            <!-- Opción 5 -->
+            <div class="tarjeta-plato">
+                <div class="foto-plato">
+                    <img src="img/raro.jpg" alt="Mariscada de crustáceos y centolla rellena">
+                </div>
+                <div class="detalle-plato">
+                    <h3>Mariscada de crustáceos y centolla rellena</h3>
+                    <p class="ingredientes">centolla viva de 1 kilo y medio aproximadamente, conchas finas vivas, gambas frescas grandes, limones y medio medianos, ajos muy gruesos, perejil fresco no muy fino.</p>
+                </div>
+            </div>
+
+            <!-- Opción 6 -->
+            <div class="tarjeta-plato">
+                <div class="foto-plato">
+                    <img src="img/pastica.jpg" alt="Spaghetti con carne de centolla">
+                </div>
+                <div class="detalle-plato">
+                    <h3>Spaghetti con carne de centolla</h3>
+                    <p class="ingredientes">Centollas (hervidas), Spaghetti, Cebollas (en daditos), ajo (en daditos), Concentrado de tomate, Brandy, Estragón, Tomates cherry (partidos por la mitad), Aceite de oliva.</p>
+                </div>
+            </div>
+
+            <!-- Opción 7 -->
+            <div class="tarjeta-plato">
+                <div class="foto-plato">
+                    <img src="img/raro2.jpeg" alt="Txangurro a la Donostiarra">
+                </div>
+                <div class="detalle-plato">
+                    <h3>Txangurro a la Donostiarra (Centollo al horno)</h3>
+                    <p class="ingredientes">Carne de centollo limpia, cebolla picada, puerro blanco, salsa de tomate frito casero, copa de brandy flameado, mantequilla derretida y pan rallado crujiente.</p>
+                </div>
+            </div>
+
+            <!-- Opción 8 -->
+            <div class="tarjeta-plato">
+                <div class="foto-plato">
+                    <img src="img/perro.jpg" alt="Croquetas cremosas de centollo">
+                </div>
+                <div class="detalle-plato">
+                    <h3>Croquetas cremosas de centollo</h3>
+                    <p class="ingredientes">Carne de centollo seleccionada, leche fresca de campo, harina tamizada, mantequilla de Soria, cebolleta tierna, huevo batido y pan crujiente panko.</p>
+                </div>
+            </div>
+
+            <!-- Opción 9 -->
+            <div class="tarjeta-plato">
+                <div class="foto-plato">
+                    <img src="img/caldo.jpg" alt="Arroz caldoso de centollo y almejas">
+                </div>
+                <div class="detalle-plato">
+                    <h3>Arroz caldoso de centollo y almejas</h3>
+                    <p class="ingredientes">plato de cuchara reconfortante, caracterizado por una textura sumamente jugosa, un caldo abundante y ligado, y un profundo e intenso sabor a mar.</p>
+                </div>
+            </div>
+
+
+
+            <!-- Opción 10 (Completada) -->
+            <div class="tarjeta-plato">
+                <div class="foto-plato">
+                    <img src="img/cevichito.jpg" alt="Ceviche de centolla al ají amarillo">
+                </div>
+                <div class="detalle-plato">
+                    <h3>Ceviche de centolla al ají amarillo</h3>
+                    <p class="ingredientes">Carne magra de centolla, leche de tigre base, pasta de ají amarillo, cebolla pluma morada, camote cocido y maíz cancha criollo.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+        
+
+    </div>
+
+</main>
+<footer class="footer-centollo">
+
+    <div class="footer-info">
+
+        <div class="item">
+            <h4>DESDE 1911</h4>
+            <p>Más de 100 años trabajando con los mejores productos del mar.</p>
+        </div>
+
+        <div class="item">
+            <h4>PRODUCTO FRESCO</h4>
+            <p>Pescados y mariscos frescos directamente de la lonja.</p>
+        </div>
+
+        <div class="item">
+            <h4>ARTESANAL</h4>
+            <p>Procesos tradicionales para conservar el mejor sabor.</p>
+        </div>
+
+        <div class="item">
+            <h4>TIENDA PROPIA</h4>
+            <p>También puedes visitarnos en nuestras instalaciones.</p>
+        </div>
+
+        <div class="item">
+            <h4>CALIDAD</h4>
+            <p>Seleccionamos cuidadosamente cada producto para ti.</p>
+        </div>
+
+    </div>
+
+    <div class="footer-contacto">
+
+        <div class="datos">
+            <p>📍 Carrera 1 #93-50 Chicó Alto, Bogotá</p>
+            <p>📞 (+57) 316 690 0508</p>
+            <p>✉ servicioalcliente@elcentollo.com</p>
+        </div>
+
+        <div class="redes">
+            <a href="#">📘</a>
+            <a href="#">🐦</a>
+            <a href="#">🟢</a>
+            <a href="#">✈️</a>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

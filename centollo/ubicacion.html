@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - El Centollo</title>
+
+    <style>
+        /* RESET GENERAL */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#ffffff;
+            color:#333;
+        }
+
+        /* ENCABEZADO */
+        .encabezado{
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+
+        .logo{
+            width:100%;
+            display:flex;
+            justify-content:center;
+            padding:40px 0;
+            background:#fff;
+        }
+
+        .logo img{
+            width:500px;
+            max-width:95vw;
+            height:auto;
+        }
+
+        /* MENÚ */
+        .barra-navegacion{
+            width:100%;
+            background:#111518;
+            padding:30px 0;
+        }
+
+        .menu{
+            display:flex;
+            justify-content:center;
+            list-style:none;
+            gap:60px;
+        }
+
+        .menu a{
+            text-decoration:none;
+            color:white;
+            font-weight:bold;
+            font-size:1.3rem;
+            transition:0.3s;
+        }
+
+        .menu a:hover{
+            color:#d4b08a;
+        }
+
+        /* BANNER */
+        .banner-ubicacion{
+            background:#fffcf5;
+            width:100%;
+            padding:50px 20px;
+            text-align:center;
+            border-bottom:1px solid #f0eae1;
+        }
+
+        .linea-decorativa{
+            width:80px;
+            height:1px;
+            background:#9e6b43;
+            margin:0 auto 15px;
+        }
+
+        .banner-ubicacion h1{
+            color:#111518;
+            font-family:Georgia,serif;
+            font-size:2.2rem;
+            font-style:italic;
+            margin-bottom:20px;
+        }
+
+        .banner-ubicacion p{
+            color:#555;
+            font-size:1.1rem;
+            line-height:1.6;
+        }
+
+        .direccion-destacada{
+            color:#9e6b43;
+            font-weight:bold;
+            margin-top:10px;
+        }
+
+        /* MAPA */
+        .contenedor-mapa{
+            max-width:1200px;
+            margin:50px auto;
+            padding:0 20px;
+        }
+
+        .mapa-incrustado{
+            width:100%;
+            height:500px;
+            border:1px solid #dcd5ca;
+            border-radius:6px;
+            overflow:hidden;
+        }
+
+        .mapa-incrustado iframe{
+            width:100%;
+            height:100%;
+            border:none;
+        }
+
+        /* FOOTER */
+        /* FOOTER NUEVO */
+
+.footer-centollo{
+    margin-top:50px;
+    background:#111518;
+    color:white;
+}
+
+.footer-info{
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.footer-info .item{
+    width:180px;
+    margin:10px;
+}
+
+.footer-info h4{
+    color:#5bc26b;
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+.footer-info p{
+    font-size:13px;
+    line-height:1.5;
+}
+
+.footer-contacto{
+    background:#f4f4f4;
+    color:#5bc26b;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.datos p{
+    margin:5px 0;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.redes{
+    display:flex;
+    gap:15px;
+}
+
+.redes a{
+    text-decoration:none;
+    font-size:35px;
+    transition:0.3s;
+}
+
+.redes a:hover{
+    transform:scale(1.15);
+}
+
+@media(max-width:768px){
+
+    .footer-info{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .footer-contacto{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+}
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+
+            .logo{
+                padding:20px 0;
+            }
+
+            .logo img{
+                width:280px;
+            }
+
+            .barra-navegacion{
+                padding:15px 0;
+            }
+
+            .menu{
+                flex-direction:column;
+                align-items:center;
+                gap:15px;
+            }
+
+            .menu a{
+                font-size:1.1rem;
+            }
+
+            .banner-ubicacion h1{
+                font-size:1.8rem;
+            }
+
+            .mapa-incrustado{
+                height:350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="El Centollo">
+        </div>
+
+        <nav class="barra-navegacion">
+            <ul class="menu">
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner-ubicacion">
+        <div class="linea-decorativa"></div>
+        <h1>Ubicación</h1>
+        <p>Nos encontramos ubicados en:</p>
+        <p class="direccion-destacada">
+            Colegio cedid san pablo
+        </p>
+    </section>
+
+    <!-- MAPA -->
+    <main class="contenedor-mapa">
+        <div class="mapa-incrustado">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15907.640859755817!2d-74.21101574092133!3d4.6100907990751345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e45e5e39175%3A0x6e1d5535ab45c4b!2sColegio%20Cedid%20San%20Pablo!5e0!3m2!1ses-419!2sco!4v1781275215024!5m2!1ses-419!2sco"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-centollo">
+
+    <div class="footer-info">
+
+        <div class="item">
+            <h4>DESDE 1911</h4>
+            <p>Más de 100 años trabajando con los mejores productos del mar.</p>
+        </div>
+
+        <div class="item">
+            <h4>PRODUCTO FRESCO</h4>
+            <p>Pescados y mariscos frescos directamente de la lonja.</p>
+        </div>
+
+        <div class="item">
+            <h4>ARTESANAL</h4>
+            <p>Procesos tradicionales para conservar el mejor sabor.</p>
+        </div>
+
+        <div class="item">
+            <h4>TIENDA PROPIA</h4>
+            <p>También puedes visitarnos en nuestras instalaciones.</p>
+        </div>
+
+        <div class="item">
+            <h4>CALIDAD</h4>
+            <p>Seleccionamos cuidadosamente cada producto para ti.</p>
+        </div>
+
+    </div>
+
+    <div class="footer-contacto">
+
+        <div class="datos">
+            <p>📍 Carrera 1 #93-50 Chicó Alto, Bogotá</p>
+            <p>📞 (+57) 316 690 0508</p>
+            <p>✉ servicioalcliente@elcentollo.com</p>
+        </div>
+
+        <div class="redes">
+            <a href="#">📘</a>
+            <a href="#">🐦</a>
+            <a href="#">🟢</a>
+            <a href="#">✈️</a>
+        </div>
+
+    </div>
+
+</footer>
+</body>
+</html>

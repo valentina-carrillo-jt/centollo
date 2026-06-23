@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integrantes - El Centollo</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fcfcfc;
+}
+
+/* ENCABEZADO */
+.encabezado{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.logo{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:40px 0;
+    background:#fff;
+}
+
+.logo img{
+    width:500px;
+    max-width:95vw;
+}
+
+.barra-navegacion{
+    width:100%;
+    background:#111518;
+    padding:30px 0;
+}
+
+.menu{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:80px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-size:1.4rem;
+    font-weight:bold;
+}
+
+.menu a:hover{
+    color:#d4b08c;
+}
+
+/* TÍTULO */
+.titulo-equipo{
+    text-align:center;
+    padding:60px 20px;
+    background:#fffcf5;
+}
+
+.titulo-equipo h1{
+    font-size:45px;
+    color:#9e6b43;
+    margin-bottom:10px;
+}
+
+.titulo-equipo p{
+    color:#666;
+    font-size:18px;
+}
+
+/* TARJETAS */
+.contenedor-tarjetas{
+    max-width:1200px;
+    margin:60px auto;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.tarjeta{
+    width:350px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.3s;
+    text-align:center;
+}
+
+.tarjeta:hover{
+    transform:translateY(-10px);
+}
+
+.tarjeta img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.tarjeta h2{
+    color:#9e6b43;
+    padding:20px 15px 10px;
+    font-size:22px;
+}
+
+.tarjeta p{
+    padding:0 20px 25px;
+    color:#555;
+    line-height:1.6;
+}
+
+/* FOOTER */
+.footer-equipo{
+    background:#111518;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    .menu{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .logo img{
+        width:280px;
+    }
+
+    .titulo-equipo h1{
+        font-size:32px;
+    }
+
+    .tarjeta{
+        width:90%;
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="encabezado">
+    <div class="logo">
+        <img src="img/logo.png" alt="El Centollo">
+    </div>
+
+    <nav class="barra-navegacion">
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="titulo-equipo">
+    <h1>Nuestro Equipo</h1>
+    <p>Conoce a las personas que hicieron posible este proyecto</p>
+</section>
+
+<section class="contenedor-tarjetas">
+
+    <div class="tarjeta">
+        <img src="img/JULI.jpeg" alt="Juliana">
+        <h2>Stefannith Juliana Castiblanco Herrera</h2>
+        <p>Desarrolladora del proyecto y diseño de la página web.</p>
+    </div>
+
+    <div class="tarjeta">
+        <img src="img/VALE.jpeg" alt="Valentina">
+        <h2>Valentina Carrillo Peña</h2>
+        <p>Desarrolladora del proyecto y encargada del contenido.</p>
+    </div>
+
+</section>
+
+<footer class="footer-equipo">
+        <h3>El Centollo</h3>
+        <p>📞 3046801050</p>
+        <p>📧 centollo@gmail.com</p>
+        <p>👩‍💻 Desarrollado por Valentina Carrillo y Stefannith Juliana Castiblanco</p>
+    <p>© 2026 - El Centollo</p>
+</footer>
+
+</body>
+</html>

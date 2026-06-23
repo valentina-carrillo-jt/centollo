@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Centollo</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>/* FOOTER */
+/* FOOTER NUEVO */
+
+.footer-centollo{
+    margin-top:50px;
+    background:#111518;
+    color:white;
+}
+
+.footer-info{
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.footer-info .item{
+    width:180px;
+    margin:10px;
+}
+
+.footer-info h4{
+    color:#5bc26b;
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+.footer-info p{
+    font-size:13px;
+    line-height:1.5;
+}
+
+.footer-contacto{
+    background:#f4f4f4;
+    color:#5bc26b;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.datos p{
+    margin:5px 0;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.redes{
+    display:flex;
+    gap:15px;
+}
+
+.redes a{
+    text-decoration:none;
+    font-size:35px;
+    transition:0.3s;
+}
+
+.redes a:hover{
+    transform:scale(1.15);
+}
+
+@media(max-width:768px){
+
+    .footer-info{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .footer-contacto{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .logo img{
+        width:280px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .tarjeta-plato{
+        flex-direction:column;
+    }
+
+    .foto-plato{
+        width:100%;
+        height:250px;
+    }
+
+    .titulo-menu{
+        font-size:2rem;
+    }
+}
+/* ===== MODAL ===== */
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-contenido{
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.modal-contenido h2{
+    color: #9e6b43;
+    margin-bottom: 15px;
+}
+
+.img-promo{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.cerrar{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#cerrarBtn{
+    background: #9e6b43;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#cerrarBtn:hover{
+    opacity: 0.9;
+}
+</style>
+
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo El Centollo">
+        </div>
+
+        <nav class="barra-navegacion">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                 <li><a href="menu.html">menu</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor-principal">
+
+        <!-- IMAGEN -->
+        <div class="slider-container">
+            <img id="slider" src="img/PULPIN.jpg" alt="Centollo">
+
+            <div class="puntos">
+                <span class="activo"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- INFORMACIÓN -->
+        <section class="informacion">
+
+            <h2>Centollo</h2>
+
+            <p>
+                También conocido como Changurro o Txangurro, Cámbara, Araña,
+                Cranca, Pateiro, Bruño o Cangrejo velludo. Es un
+                <strong>crustáceo braquiuro y decápodo</strong>.
+                Pertenece a la familia Majidae, la misma que los cangrejos.
+                Vive en la costa en fondos rocosos o arenosos y habita en
+                profundidades mayores de 100 metros.
+            </p>
+
+            <div class="datos-cientificos">
+                <p><strong>Nombre científico:</strong> <em>Maja squinado</em></p>
+                <p><strong>Inglés:</strong> Spinous spider crab</p>
+                <p><strong>Francés:</strong> Araignée européenne</p>
+            </div>
+
+            <div class="especificaciones">
+                <p><strong>Peso:</strong> 500 gr - 4 kg</p>
+                <p><strong>Dimensiones:</strong> 12 - 20 cm</p>
+            </div>
+
+        </section>
+
+    </main>
+<!-- MODAL PROMOCIÓN -->
+<div id="modalPromo" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+
+        <h2>🎉 PROMOCIÓN ESPECIAL 🎉</h2>
+
+        <img src="img/PULPIN.jpg" alt="Promoción" class="img-promo">
+
+        <p>
+            ¡Bienvenido a <strong>El Centollo</strong>!
+            Esta semana disfruta de un <strong>20% de descuento</strong>
+            en nuestros platos seleccionados.
+        </p>
+
+        <button id="cerrarBtn">Cerrar</button>
+    </div>
+</div>
+    <!-- FOOTER -->
+    <footer class="footer-centollo">
+
+    <div class="footer-info">
+
+        <div class="item">
+            <h4>DESDE 1911</h4>
+            <p>Más de 100 años trabajando con los mejores productos del mar.</p>
+        </div>
+
+        <div class="item">
+            <h4>PRODUCTO FRESCO</h4>
+            <p>Pescados y mariscos frescos directamente de la lonja.</p>
+        </div>
+
+        <div class="item">
+            <h4>ARTESANAL</h4>
+            <p>Procesos tradicionales para conservar el mejor sabor.</p>
+        </div>
+
+        <div class="item">
+            <h4>TIENDA PROPIA</h4>
+            <p>También puedes visitarnos en nuestras instalaciones.</p>
+        </div>
+
+        <div class="item">
+            <h4>CALIDAD</h4>
+            <p>Seleccionamos cuidadosamente cada producto para ti.</p>
+        </div>
+
+    </div>
+
+    <div class="footer-contacto">
+
+        <div class="datos">
+            <p>📍 Carrera 1 #93-50 Chicó Alto, Bogotá</p>
+            <p>📞 (+57) 316 690 0508</p>
+            <p>✉ servicioalcliente@elcentollo.com</p>
+        </div>
+
+        <div class="redes">
+            <a href="#">📘</a>
+            <a href="#">🐦</a>
+            <a href="#">🟢</a>
+            <a href="#">✈️</a>
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="js/slider.js"></script>
+<script>
+const modal = document.getElementById("modalPromo");
+const cerrar = document.querySelector(".cerrar");
+const cerrarBtn = document.getElementById("cerrarBtn");
+
+cerrar.onclick = function(){
+    modal.style.display = "none";
+}
+
+cerrarBtn.onclick = function(){
+    modal.style.display = "none";
+}
+
+window.onclick = function(e){
+    if(e.target == modal){
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
